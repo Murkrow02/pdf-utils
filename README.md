@@ -48,8 +48,8 @@ ParsePdfTextService::create()
 use Murkrow\PdfUtils\Services\MergePdfService;
 MergePdfService::create()
         ->setInputFiles(["1.pdf", "2.pdf"])
-        ->addInputFile(mockFileDir("3.pdf"))
-        ->setOutputFile(mockFileDir("123.pdf"))
+        ->addInputFile(("3.pdf")
+        ->setOutputFile(("123.pdf")
         ->execute();
 ```
 ### Split PDF into multiple PDFs
@@ -57,7 +57,7 @@ MergePdfService::create()
 ```php
 use Murkrow\PdfUtils\Services\SplitPdfService;
 SplitPdfService::create()
-        ->setInputFile(mockFileDir("123.pdf"))
+        ->setInputFile(("123.pdf")
         ->setOutputFilesDirectory("splitting")
         ->fromPage(1)
         ->toPage(3)
