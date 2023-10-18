@@ -1,4 +1,10 @@
-# pdf-utils
+pdf-utils
+=============
+
+
+[![Latest Stable Version](http://poser.pugx.org/murkrow/pdf-utils/v)](https://packagist.org/packages/phpunit/phpunit)
+[![Total Downloads](http://poser.pugx.org/murkrow/pdf-utils/downloads)](https://packagist.org/packages/phpunit/phpunit)
+
 A wrapper for popper-utils for your Laravel project
 
 ## Prerequisites
@@ -31,7 +37,7 @@ php artisan vendor:publish --provider="Murkrow\PdfUtils\PdfUtilsServiceProvider"
 ```php
 use Murkrow\PdfUtils\Services\ParsePdfTextService;
 ParsePdfTextService::create()
-        ->setInputFile(mockFileDir("example.pdf"))
+        ->setInputFile("example.pdf")
         ->flattenText(false)
         ->execute()
         ->getOperationResult()
@@ -41,8 +47,7 @@ ParsePdfTextService::create()
 ```php
 use Murkrow\PdfUtils\Services\MergePdfService;
 MergePdfService::create()
-        ->addInputFile(mockFileDir("1.pdf"))
-        ->addInputFile(mockFileDir("2.pdf"))
+        ->setInputFiles(["1.pdf", "2.pdf"])
         ->addInputFile(mockFileDir("3.pdf"))
         ->setOutputFile(mockFileDir("123.pdf"))
         ->execute();
