@@ -13,10 +13,11 @@ class BasePdfService
 
     protected static function getTmpFolder(): string
     {
-        return TemporaryDirectory::make()
-            ->name('murkrow-pdf-utils')
-            ->force()
-            ->create()
-            ->path();
+        $tmpDir = TemporaryDirectory::make()
+            ->name('murkrow-pdf-utils');
+        if($tmpDir->exists())
+            return $tmpDir->path();
+        else
+            return $tmpDir->create()->path();
     }
 }
