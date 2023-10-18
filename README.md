@@ -2,8 +2,8 @@ pdf-utils
 =============
 
 
-[![Latest Stable Version](http://poser.pugx.org/murkrow/pdf-utils/v)](https://packagist.org/packages/phpunit/phpunit)
-[![Total Downloads](http://poser.pugx.org/murkrow/pdf-utils/downloads)](https://packagist.org/packages/phpunit/phpunit)
+[![Latest Stable Version](http://poser.pugx.org/murkrow/pdf-utils/v)](https://packagist.org/packages/murkrow/pdf-utils)
+[![Total Downloads](http://poser.pugx.org/murkrow/pdf-utils/downloads)](https://packagist.org/packages/murkrow/pdf-utils)
 
 A wrapper for popper-utils for your Laravel project
 
