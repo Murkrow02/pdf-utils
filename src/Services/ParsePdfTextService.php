@@ -3,7 +3,6 @@
 namespace Murkrow\PdfUtils\Services;
 
 use Murkrow\PdfUtils\Services\Base\OneToResultPdfService;
-use Murkrow\PdfUtils\Services\Interfaces\ExecutablePdfService;
 
 class ParsePdfTextService extends OneToResultPdfService
 {

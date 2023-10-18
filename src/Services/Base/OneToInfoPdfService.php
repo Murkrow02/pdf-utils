@@ -7,7 +7,7 @@ use Murkrow\PdfUtils\Traits\HasMultipleInputFiles;
 use Murkrow\PdfUtils\Traits\HasSingleInputFile;
 use Murkrow\PdfUtils\Traits\HasSingleOutputFile;
 
-abstract class OneToInfoPdfService extends BasePdfService implements ExecutablePdfService
+abstract class OneToInfoPdfService extends BasePdfService
 {
     use HasSingleInputFile;
     public ?string $creator         = null;

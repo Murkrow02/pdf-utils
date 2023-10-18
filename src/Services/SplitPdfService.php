@@ -5,7 +5,7 @@ namespace Murkrow\PdfUtils\Services;
 use Murkrow\PdfUtils\Services\Base\OneToManyPdfService;
 use Murkrow\PdfUtils\Traits\HasPageRange;
 
-class SplitPdfPdfService extends OneToManyPdfService
+class SplitPdfService extends OneToManyPdfService
 {
     use HasPageRange;
 

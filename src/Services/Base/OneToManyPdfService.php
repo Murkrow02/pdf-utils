@@ -7,7 +7,7 @@ use Murkrow\PdfUtils\Traits\HasMultipleInputFiles;
 use Murkrow\PdfUtils\Traits\HasMultipleOutputFiles;
 use Murkrow\PdfUtils\Traits\HasSingleInputFile;
 
-abstract class OneToManyPdfService extends BasePdfService implements ExecutablePdfService
+abstract class OneToManyPdfService extends BasePdfService
 {
     use HasSingleInputFile;
     use HasMultipleOutputFiles;

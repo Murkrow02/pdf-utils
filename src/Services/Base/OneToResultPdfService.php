@@ -8,7 +8,7 @@ use Murkrow\PdfUtils\Traits\HasOperationResult;
 use Murkrow\PdfUtils\Traits\HasSingleInputFile;
 use Murkrow\PdfUtils\Traits\HasSingleOutputFile;
 
-abstract class OneToResultPdfService extends BasePdfService implements ExecutablePdfService
+abstract class OneToResultPdfService extends BasePdfService
 {
     use HasSingleInputFile, HasOperationResult;
 }

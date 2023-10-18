@@ -1,12 +1,12 @@
 <?php
 
 use Murkrow\PdfUtils\Services\ParsePdfTextService;
-use Murkrow\PdfUtils\Services\SplitPdfPdfService;
+use Murkrow\PdfUtils\Services\SplitPdfService;
 
 it("can split a pdf", function (){
 
     // Split pdf in 3 parts
-    $result = SplitPdfPdfService::create()
+    $result = SplitPdfService::create()
         ->setInputFile(mockFileDir("splitting/123.pdf"))
         ->setOutputFilesDirectory(mockFileDir("splitting"))
         ->fromPage(1)
@@ -33,12 +33,12 @@ it("can split a pdf", function (){
 
     // Check that providing wrong page numbers throws an error
     expect(function (){
-        SplitPdfPdfService::create()
+        SplitPdfService::create()
             ->fromPage(0)
             ->toPage(1);
     })->toThrow(\Murkrow\PdfUtils\Exceptions\InvalidPageRangeException::class);
     expect(function (){
-        SplitPdfPdfService::create()
+        SplitPdfService::create()
             ->fromPage(3)
             ->toPage(2);
     })->toThrow(\Murkrow\PdfUtils\Exceptions\InvalidPageRangeException::class);

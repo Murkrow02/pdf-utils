@@ -48,9 +48,10 @@ MergePdfService::create()
         ->execute();
 ```
 ### Split PDF into multiple PDFs
+
 ```php
-use Murkrow\PdfUtils\Services\SplitPdfPdfService;
-SplitPdfPdfService::create()
+use Murkrow\PdfUtils\Services\SplitPdfService;
+SplitPdfService::create()
         ->setInputFile(mockFileDir("123.pdf"))
         ->setOutputFilesDirectory("splitting")
         ->fromPage(1)

@@ -2,10 +2,11 @@
 
 namespace Murkrow\PdfUtils\Services\Base;
 
-use Murkrow\PdfUtils\Services\Interfaces\ExecutablePdfService;
+use Murkrow\PdfUtils\Traits\HasSingleInputFile;
+use Murkrow\PdfUtils\Traits\HasSingleOutputFile;
 
-abstract class OneToOnePdfService extends BasePdfService implements ExecutablePdfService
+abstract class OneToOnePdfService extends BasePdfService
 {
-    protected string $inputFilePath;
-    protected string $outputFilePath;
+    use HasSingleInputFile;
+    use HasSingleOutputFile;
 }
