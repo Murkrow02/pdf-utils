@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 use Murkrow\PdfUtils\Services\Base\OneToOnePdfService;
 use Murkrow\PdfUtils\Traits\HasPageRange;
 
-class ExtractPdfPagesService extends OneToOnePdfService
+class ExtractPdfPageRangeService extends OneToOnePdfService
 {
     use HasPageRange;
 

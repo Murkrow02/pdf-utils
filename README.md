@@ -60,6 +60,18 @@ SplitPdfService::create()
         ->execute();
 ```
 
+### Extract page range from PDF
+```php
+use Murkrow\PdfUtils\Services\ExtractPdfPageRangeService;
+ExtractPdfPageRangeService::create()
+    ->fromPage(1)
+    ->toPage(2)
+    ->setInputFile('big.pdf')
+    ->setOutputFile('subset.pdf')
+    ->execute();
+        
+```
+
 ### Get PDF info (incomplete)
 ```php
 use Murkrow\PdfUtils\Services\GetPdfInfoService;
@@ -75,6 +87,7 @@ dd($result->pages);
 ```bash
 vendor/bin/pest
 ```
+
 ## Contributing
 Contributions are welcome, you are free to open a PR or an issue.
 

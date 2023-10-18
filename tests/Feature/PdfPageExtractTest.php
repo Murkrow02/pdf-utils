@@ -1,15 +1,15 @@
 <?php
 
-use Murkrow\PdfUtils\Services\ExtractPdfPagesService;
+use Murkrow\PdfUtils\Services\ExtractPdfPageRangeService;
 use Murkrow\PdfUtils\Services\GetPdfInfoService;
 use Murkrow\PdfUtils\Services\ParsePdfTextService;
 use Murkrow\PdfUtils\Services\SplitPdfService;
 use function Pest\testDirectory;
 
-it("can extract pages from pdf", function (){
+it("can extract page range from pdf", function (){
 
     // Extract pages
-    ExtractPdfPagesService::create()
+    ExtractPdfPageRangeService::create()
         ->fromPage(1)
         ->toPage(2)
         ->setInputFile(mockFileDir('extracting/123.pdf'))
