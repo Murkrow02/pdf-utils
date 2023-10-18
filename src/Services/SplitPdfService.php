@@ -12,12 +12,13 @@ class SplitPdfService extends OneToManyPdfService
     public function execute(): self
     {
         // Split the pdf
-        $command = "pdfseparate -f $this->startPage -l $this->endPage \"$this->inputFilePath\" \"$this->outputFilesDirectory/$this->outputFileNamePrefix\"%d.pdf";
+        $filePrefix = $this->outputFileNamePrefix ?? "";
+        $command = "pdfseparate -f $this->startPage -l $this->endPage \"$this->inputFilePath\" \"$this->outputFilesDirectory/$filePrefix\"%d.pdf";
         exec($command);
 
         // Fill the output file paths
         for($i = $this->startPage; $i <= $this->endPage; $i++){
-            $this->outputFilePaths[] = $this->outputFilesDirectory."/".$this->outputFileNamePrefix.$i.".pdf";
+            $this->outputFilePaths[] = $this->outputFilesDirectory."/".$filePrefix.$i.".pdf";
         }
 
         return $this;
