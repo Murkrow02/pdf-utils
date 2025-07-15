@@ -2,12 +2,12 @@
 
 namespace Tests;
 
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\View;
+use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class TestCase extends OrchestraTestCase
 {
+    use WithWorkbench;
     /**
      * {@inheritDoc}
      */
