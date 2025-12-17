@@ -1,7 +1,7 @@
 {
     "name": "murkrow/pdf-utils",
     "description": "A poppler-utils wrapper for Laravel applications",
-    "version": "0.5",
+    "version": "1.0",
     "keywords": [
         "pdf",
         "laravel",
@@ -25,15 +25,12 @@
     },
     "require": {
         "php": "^8.2",
-        "illuminate/contracts": "^11.0",
-        "illuminate/support": "^11.0",
-        "laravel/framework": "^11.0",
+        "illuminate/contracts": "^12.0",
+        "illuminate/support": "^12.0",
+        "laravel/framework": "^12.0",
         "spatie/temporary-directory": "^2.2"
     },
     "require-dev": {
-        "pestphp/pest": "^2.24",
-        "orchestra/testbench": "^9.0",
-        "pestphp/pest-plugin-laravel": "^2.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
