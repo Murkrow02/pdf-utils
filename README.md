@@ -5,7 +5,13 @@ pdf-utils
 [![Latest Stable Version](http://poser.pugx.org/murkrow/pdf-utils/v)](https://packagist.org/packages/murkrow/pdf-utils)
 [![Total Downloads](http://poser.pugx.org/murkrow/pdf-utils/downloads)](https://packagist.org/packages/murkrow/pdf-utils)
 
-A wrapper for popper-utils for your Laravel project
+A wrapper for poppler-utils for your Laravel project
+
+## Compatibility
+
+| Package version | Laravel version | PHP version |
+|-----------------|-----------------|-------------|
+| 1.x             | 12.x – 13.x    | ^8.2        |
 
 ## Prerequisites
 Ensure to have poppler-utils installed on your system. You can install it with the following command:
