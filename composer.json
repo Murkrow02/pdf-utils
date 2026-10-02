@@ -1,7 +1,6 @@
 {
     "name": "murkrow/pdf-utils",
     "description": "A poppler-utils wrapper for Laravel applications",
-    "version": "1.0",
     "keywords": [
         "pdf",
         "laravel",
